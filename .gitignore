@@ -1,0 +1,11 @@
+.build/
+build/
+dist/
+*.xcodeproj/
+.swiftpm/
+DerivedData/
+.DS_Store
+# Firmware images and chip read-backs stay local; the app opens them from anywhere.
+Firmware/
+*.hex
+!Tests/FirmwareCoreTests/Fixtures/*.hex

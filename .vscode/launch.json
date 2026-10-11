@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:RFGEN44-FirmwareUpdator}",
+            "name": "Debug RFGEN44Updater",
+            "target": "RFGEN44Updater",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug RFGEN44Updater"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:RFGEN44-FirmwareUpdator}",
+            "name": "Release RFGEN44Updater",
+            "target": "RFGEN44Updater",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release RFGEN44Updater"
+        }
+    ]
+}
