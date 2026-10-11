@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1
+
+- With no programmer plugged in, the app now chooses an MPLAB X that supports the PICkit 3 (v6.20), instead of the newest one, which showed a needless "no PICkit 3 support" warning.
+
 ## 1.0.0
 
 First signed and notarized release.

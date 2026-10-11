@@ -102,10 +102,11 @@ final class UpdaterModel {
     private(set) var installations: [IPECmdInstallation] = []
     private(set) var customInstallation: IPECmdInstallation?
     private(set) var isLocatingIPE = false
-    /// The custom choice if any, otherwise the newest installation that still supports the selected programmer.
+    /// The custom choice if any, otherwise the newest installation that still supports the selected
+    /// programmer. With nothing plugged in it plans for a PICkit 3, the programmer this app is for.
     var ipecmd: IPECmdInstallation? {
         if let customInstallation { return customInstallation }
-        guard let kind = selectedProgrammer?.programmer ?? usb.programmers.first?.programmer else { return installations.first }
+        let kind = selectedProgrammer?.programmer ?? usb.programmers.first?.programmer ?? .pickit3
         return installations.first { $0.supports(kind) } ?? installations.first
     }
 
